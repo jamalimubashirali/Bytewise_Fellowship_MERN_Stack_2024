@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-slate-900 w-full h-screen overflow-auto p-10' >
+      <div className='bg-slate-900 w-full h-screen overflow-auto p-10 mx-auto' >
         <AddTodo />
         <Todo />
       </div>

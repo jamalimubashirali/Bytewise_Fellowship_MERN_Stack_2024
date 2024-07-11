@@ -7,13 +7,16 @@ const Todo = () => {
     const dispatch = useDispatch()
     return (
         <>
-            <div className='my-3'>
+            <div className='my-3 '>
                 <h2 className='text-3xl text-bold text-white text-center'>Todos</h2>
                 {
                     todos.map((todo) => (
-                        <li className='list-none bg-slate-600 w-full flex justify-between align-baseline p-4 rounded-xl my-3 text-white' key={todo.id}>
+                        <li className='list-none bg-slate-600 w-full flex justify-between items-center p-4 rounded-xl my-3 text-white' key={todo.id}>
                             {todo.text}
-                            <button className='bg-red-800 py-3 px-10 text-md rounded-xl' onClick={() => dispatch(removeTodo(todo.id))}>X</button>
+                            <span>
+                                <button className='bg-red-800 py-3 px-10 text-md rounded-lg mx-3' onClick={() => dispatch(removeTodo(todo.id))}>X</button>
+                                <button className='bg-green-800 py-3 px-7 text-md rounded-lg' onClick={() => dispatch(updateTodo(todo.id))}>Update</button>
+                            </span>
                         </li>
                     ))
                 }
