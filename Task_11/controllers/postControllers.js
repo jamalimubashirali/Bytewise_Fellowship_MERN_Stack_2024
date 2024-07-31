@@ -44,7 +44,6 @@ export const getPostById = (req, res, next) =>{
 
 // POST /api/posts
 export const createPost = (req, res, next)=> {
-    console.log(req.body);
     const newPost = {
         id : posts.length +1,
         name : req.body.name,
@@ -57,7 +56,6 @@ export const createPost = (req, res, next)=> {
     }
     posts.push(newPost);
     res.status(201).json(posts);
-    
 }
 
 // PUT /api/posts/:id
