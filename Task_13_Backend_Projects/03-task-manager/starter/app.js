@@ -16,6 +16,7 @@ const app = express();
 
 // Middlewares in use
 app.use(express.json());
+app.use(express.static('./public'));
 app.use('/api/tasks', tasks);
 
 // Staring point of the application
