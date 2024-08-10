@@ -11,7 +11,8 @@ const router = express.Router();
 // Api routes
 router.get('/', getAllTasks);
 router.post('/', addNewTask);
-router.route('/:id').get(getTaskById).patch(updateTaskbyId).delete(deleteTaskById);
+router.route('/:id').get(getTaskById).delete(deleteTaskById);
+router.patch('/:id', updateTaskbyId);
 
 
 
