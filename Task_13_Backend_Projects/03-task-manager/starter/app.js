@@ -5,11 +5,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+
 // Database Connection
 import './db/connect.js'
 
 // Port on which server is running on
-const port = process.env.PORT
+const port = process.env.PORT || 8000
 
 // Sever Initalization.
 const app = express();
